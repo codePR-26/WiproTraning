@@ -1,0 +1,20 @@
+
+Angular + Backend JWT Authentication Flow
+
+User enters login credentials in Angular
+↓
+Angular sends POST request to /api/auth/login
+↓
+Backend validates credentials
+↓
+JWT token generated
+↓
+Token returned to Angular
+↓
+Angular stores token in localStorage
+↓
+Angular sends token in Authorization header for protected APIs
+↓
+Backend validates token
+↓
+Access granted to secured endpoints

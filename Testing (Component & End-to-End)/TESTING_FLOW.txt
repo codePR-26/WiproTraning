@@ -1,0 +1,35 @@
+
+Backend Testing (Unit Testing)
+
+Framework Used:
+xUnit with Moq for dependency mocking.
+
+Test Implemented:
+AuthControllerTests
+
+Purpose:
+To verify that the Login endpoint executes correctly and returns a valid IActionResult.
+
+Test Flow:
+
+User login request simulated
+↓
+Mock IAuthService returns authentication response
+↓
+AuthController.Login method executed
+↓
+Controller returns IActionResult
+↓
+Assertion verifies response type
+
+End-to-End Flow (System Level):
+
+User enters credentials in Angular UI
+↓
+Angular calls POST /api/auth/login
+↓
+Backend AuthController processes request
+↓
+JWT token generated
+↓
+Token returned to client

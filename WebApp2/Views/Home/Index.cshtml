@@ -1,0 +1,23 @@
+﻿@model WebApp2.Models.Products
+
+<h2>Add Product</h2>
+
+<form asp-action="Index" method="post">
+    <div>
+        <label>Product Name</label>
+        <input asp-for="Name" />
+    </div>
+
+    <div>
+        <label>Category</label>
+        <select asp-for="Category">
+            @foreach (var c in ViewBag.Categories)
+            {
+                <option value="@c.Id">@c.Name</option>
+            }
+        </select>
+    </div>
+
+    <br />
+    <button type="submit">Save</button>
+</form>

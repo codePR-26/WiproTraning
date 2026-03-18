@@ -1,0 +1,24 @@
+
+<form [formGroup]="form" (ngSubmit)="submit()">
+
+<input formControlName="name" placeholder="Name">
+
+<div *ngIf="form.controls.name.invalid && form.controls.name.touched">
+Name required
+</div>
+
+<input formControlName="email" placeholder="Email">
+
+<div *ngIf="form.controls.email.invalid && form.controls.email.touched">
+Enter valid email
+</div>
+
+<input type="password" formControlName="password" placeholder="Password">
+
+<div *ngIf="form.controls.password.invalid && form.controls.password.touched">
+Password must be at least 6 characters
+</div>
+
+<button type="submit">Register</button>
+
+</form>

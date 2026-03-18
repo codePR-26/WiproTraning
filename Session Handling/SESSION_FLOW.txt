@@ -1,0 +1,18 @@
+
+Session Handling Flow
+
+User Login
+↓
+Server generates authentication token
+↓
+Token stored in cookie (nestinn_token)
+↓
+Client sends token with requests
+↓
+Server validates token using authorization middleware
+↓
+User session remains active
+↓
+Logout removes cookie
+↓
+Session ends
